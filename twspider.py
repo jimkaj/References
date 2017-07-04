@@ -1,3 +1,4 @@
+# Twitter Spider. Hits Twitter API and tracks people's friends. Puts in SQL
 from urllib.request import urlopen
 import urllib.error
 import twurl
@@ -5,7 +6,7 @@ import json
 import sqlite3
 import ssl
 
-TWITTER_URL = 'https://api.twitter.com/1.1/friends/list.json'
+TWITTER_URL = 'https://api.twitter.com/1.1/friends/list.json' # API for Twitter
 
 conn = sqlite3.connect('spider.sqlite')
 cur = conn.cursor()
